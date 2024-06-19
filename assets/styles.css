@@ -12,7 +12,14 @@
 }
 
 body {
-    position: relative;
+    position: relative;  
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "FLAR" 0,
+      "VOLM" 0;
 }
 
 .full-container {
@@ -28,7 +35,7 @@ body {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 header {
@@ -79,6 +86,10 @@ header {
     width: 90vw;
     background-color: #fff;
     border-radius: 15px;
+}
+
+.hide {
+    display: none;
 }
 
 .nav-mobile a {
@@ -153,6 +164,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .back-btn {
@@ -168,6 +180,10 @@ header {
     font-weight: 500;
 }
 
+.back-btn:hover {
+    background-color: var(--dark-cyan);
+}
+
 .second .content-container {
     margin: 20px 0;
 }
@@ -177,7 +193,7 @@ header {
 }
 
 .second .content-container h2 {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.9rem;
     margin-top: -20px;
     padding-top: 20px;
@@ -220,6 +236,7 @@ header {
 
 .third .content-container h2 {
     margin-bottom: 30px;
+    font-size: 1.2rem;
 }
 
 .third .content-container p {
@@ -236,10 +253,12 @@ header {
 
 .card h3 {
     margin-bottom: 10px;
+    font-weight: 800;
 }
 
 .color {
     color: var(--moderate-cyan) !important;
+    font-weight: 600;
 }
 
 .card p {
@@ -251,6 +270,7 @@ header {
     font-size: 1.9rem;
     color: var(--black) !important;
     font-weight: 800;
+    margin-right: 10px;
 }
 
 .available, .out-of-stock {
@@ -266,6 +286,11 @@ header {
 
 .available {
     background-color: var(--moderate-cyan);
+    font-weight: 500;
+}
+
+.available:hover {
+    background-color: var(--dark-cyan);
 }
 
 .no-available {
@@ -276,3 +301,170 @@ header {
     background-color: var(--black);
 }
 
+.selection-modal {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    position: absolute;
+    top: 140px;
+    left: 5vw;
+    border-radius: 10px;
+}
+
+.selection-modal h2 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.selection-modal p {
+    color: var(--dark-gray);
+    line-height: 1.7;
+}
+
+.selection-modal .card {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.selection-modal .close-btn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.selection-modal input[type="radio"] {
+    margin-right: 20px;
+}
+
+.active {
+    border: 2px solid var(--moderate-cyan);
+}
+
+.container-title-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.container-title-options h3 {
+    width: 70%;
+}
+
+.container-title-options span {
+    margin-left: 35px;
+}
+
+.selection-modal .options-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.selection-modal .options-container p {
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.selection-modal .card input[type="text"] {
+    width: 40%;
+    height: 50px;
+    border-color: var(--dark-gray);
+    padding-left: 30px;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-family: "Commissioner", sans-serif;
+}
+
+.options::before {
+    content: "$";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    left: 40px;
+    color: rgb(128, 128, 128);
+}
+
+.selection-modal .card input[type="submit"] {
+    display: inline-flex;
+    justify-content: center;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--moderate-cyan);
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: "Commissioner", sans-serif;
+    font-weight: 700;
+}
+
+
+.selection-modal .card input[type="submit"]:hover {
+    background-color: var(--dark-cyan);
+}
+
+.modal-success {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px #ddd;
+    top: 50%;
+    margin: 0 6vw;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.modal-success h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.modal-success p {
+    color: var(--dark-gray);
+    text-align: center;
+    line-height: 1.7;
+}
+
+#close-success-modal {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: var(--moderate-cyan);
+    border-radius: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#close-success-modal:hover {
+    background-color: var(--dark-cyan);
+}
