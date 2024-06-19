@@ -49,7 +49,7 @@
           <div class="options-container">
             <a href="#back-modal" class="back-btn">Back this project</a>
             <a href="#"><img src="./images/icon-bookmark.svg" alt="Bookmark icon" srcset="" class="bookmark-btn-mobile"></a>
-            <a href="#" class="bookmark-btn-desktop"><img src="./images/icon-bookmark-green.svg" alt="Bookmark icon" srcset="">Bookmark</a>
+            <a href="#" class="bookmark-btn-desktop"><span id="bookmark-desktop"></span>Bookmark</a>
           </div>
         </section>
         <section class="container second">
@@ -112,7 +112,7 @@
                   to our Backer member list. Shipping is included.</p>
                   <div class="card-options">
                 <p><span class="number-inventory">0</span> left</p>
-                <a href="#" class="out-of-stock">Out of stock</a>    
+                <button href="#" class="out-of-stock" disabled>Out of stock</button>    
                   </div>
           </div>
         </section>
@@ -122,16 +122,16 @@
 
 
   <!-- Selection modal-->
-  <div class="selection- hide modal" id="back-modal">
+  <div class="selection-modal hide modal" id="back-modal">
     <h2>Back this project</h2><span><img src="./images/icon-close-modal.svg" alt="" srcset="" class="close-btn"></span>
     <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
     <form action="" method="post">
     <div class="cards-container">
       <!--First option-->
-      <div class="card no-reward">
+      <div class="card card-modal no-reward" data-id="1">
         <div class="content-container">
           <div class="container-title-options">
-        <input type="radio" name="back-project" id="" value="pledge-no-reward">
+        <input type="radio" name="back-project" id="1" value="pledge-no-reward" class="input-modal checkmark">
             <h3>Pledge with no reward</h3>
           </div>
           </div>
@@ -140,14 +140,14 @@
   you will be signed up to receive product updates via email.</p>
         </div>
         <div class="options-container hide">
-          <input type="submit" value="Continue">
+          <button type="submit">Continue</button>
         </div>
       </div>
       <!--Second option-->
-      <div class="card bamboo-stand select active">
+      <div class="card card-modal bamboo-stand select" data-id="2">
         <div class="content-container">
           <div class="container-title-options">
-        <input type="radio" name="back-project" id="" value="bamboo-stand" checked>
+        <input type="radio" name="back-project" id="2" value="bamboo-stand" class="input-modal checkmark">
             <h3>Bamboo Stand</h3>
             <span class="color">Pledge $25 or more</span>
           </div>
@@ -155,19 +155,20 @@
             you’ll be added to a special Backer member list.</p>
             <span class="inventory-left"><b>101</b> Left</span>
         </div>
-        <div class="options-container">
+        <div class="options-container hide">
           <p>Enter your pledge</p>
           <div class="options">
-          <input type="text" name="pledge-quantity" id="" placeholder="25">
-          <input type="submit" value="Continue">
+          <input type="text" name="pledge-quantity" id="3" placeholder="25" pattern="[0-9]{0,4}" maxlength="4"  class="pledge-q">
+          <button type="submit">Continue</button>
           </div>
         </div>
+          <span class="error hide">Please enter a number greater than 25</span>
       </div>
       <!--Third option-->
-      <div class="card black-edition-stand">
+      <div class="card card-modal black-edition-stand" data-id="3">
         <div class="content-container">
         <div class="container-title-options">
-        <input type="radio" name="back-project" id="" value="black-edition-stand">
+        <input type="radio" name="back-project" id="3" value="black-edition-stand" class="input-modal checkmark">
           <h3>Black Edition Stand</h3>
           <span class="color">Pledge $75 or more</span>
         </div>
@@ -178,16 +179,17 @@
         <div class="options-container hide">
           <p>Enter your pledge</p>
           <div class="options">
-          <input type="text" name="pledge-quantity" id="" placeholder="75">
-          <input type="submit" value="Continue">
+          <input type="text" name="pledge-quantity" id="" placeholder="75"pattern="[0-9]{0,4}" maxlength="4"  class="pledge-q">
+          <button type="submit">Continue</button>
           </div>
         </div>
+          <span class="error hide">Please enter a number greater than 75</span>
       </div>
       <!--Fourth Edition-->
-      <div class="card mahogany-special-edition out-of-stock-product no-available">
+      <div class="card card-modal mahogany-special-edition out-of-stock-product no-available" data-id="4">
         <div class="content-container">
         <div class="container-title-options">
-        <input type="radio" name="back-project" id="" value="mahogany-special-edition">
+        <input type="radio" name="back-project" id="4" value="mahogany-special-edition" class="input-modal" disabled>
           <h3>Mahogany Special Edition</h3>
           <span class="color">Pledge $200 or more</span>
         </div>
@@ -198,8 +200,8 @@
         <div class="options-container disabled hide">
           <p>Enter your pledge</p>
           <div class="options">
-          <input type="text" name="pledge-quantity" id="" placeholder="200">
-          <input type="submit" value="Continue">
+          <input type="text" name="pledge-quantity" id="" placeholder="200" pattern="[0-9]{0,4}" maxlength="4"  class="pledge-q">
+          <button type="submit">Continue</button>
           </div>
         </div>
       </div>
@@ -219,6 +221,8 @@
   </div>
   
   <footer>
-    <div class="attribution">Provided by <a href="https://www.frontendmentor.io/">FrontEndMentor</a>. Created by <a href="https://www.linkedin.com/in/jenn-acosta7/">Jenn Acosta</a></div></footer>
+    <div class="attribution">Provided by <a href="https://www.frontendmentor.io/">FrontEndMentor</a>. Created by <a href="https://www.linkedin.com/in/jenn-acosta7/">Jenn Acosta</a></div>
+  <script src="./app/app.js"></script>
+  </footer>
 </body>
 </html>

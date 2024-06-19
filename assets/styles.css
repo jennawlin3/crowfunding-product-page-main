@@ -34,6 +34,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 1;
 }
 
 .hide {
@@ -102,6 +103,10 @@ header {
     color: var(--black);
     text-decoration: none;
     font-weight: 600;
+}
+
+.nav-mobile a:hover {
+    background-color: var(--moderate-cyan);
 }
 
 .nav-mobile a:first-of-type {
@@ -305,6 +310,8 @@ header {
 
 .out-of-stock {
     background-color: var(--black);
+    font-family: "Commissioner", sans-serif;
+    font-size: 1rem;
 }
 
 .selection-modal {
@@ -320,6 +327,7 @@ header {
     top: 140px;
     left: 5vw;
     border-radius: 10px;
+    z-index: 999;
 }
 
 .selection-modal h2 {
@@ -415,7 +423,7 @@ header {
     color: rgb(128, 128, 128);
 }
 
-.selection-modal .card input[type="submit"] {
+.selection-modal .card button[type="submit"] {
     display: inline-flex;
     justify-content: center;
     width: 40%;
@@ -429,10 +437,17 @@ header {
     cursor: pointer;
     font-family: "Commissioner", sans-serif;
     font-weight: 700;
+    align-items: center;
 }
 
+input[type=radio] {
+    accent-color: var(--moderate-cyan); 
+    transform: scale(1.1);
 
-.selection-modal .card input[type="submit"]:hover {
+  }
+
+
+.selection-modal .card button[type="submit"]:hover {
     background-color: var(--dark-cyan);
 }
 
@@ -444,11 +459,12 @@ header {
     align-items: center;
     width: 85vw;
     background-color: #fff;
-    box-shadow: 3px 3px 5px #ddd;
     top: 50%;
     margin: 0 6vw;
     padding: 40px;
     border-radius: 10px;
+    z-index: 999;
+    top: 20%;
 }
 
 .modal-success h3 {
@@ -473,6 +489,11 @@ header {
 
 #close-success-modal:hover {
     background-color: var(--dark-cyan);
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
 }
 
 @media screen and (min-width:968px) {
@@ -536,9 +557,21 @@ header {
         font-weight: 700;
     }
 
+    #bookmark-desktop {
+        background: url(../images/icon-bookmark-green.svg);
+        width: 60px;
+        height: 56px;
+        background-repeat: no-repeat;
+    }
+
     .checked {  
-        background-color: #ddd;
-        color: var(--dark-gray);
+        background-color: #ddd !important;
+        color: var(--dark-gray) !important;
+    }
+
+    .checked > #bookmark-desktop {
+        background: url(../images/icon-bookmark.svg);
+        background-repeat: no-repeat;
     }
 
     .bookmark-btn-mobile {
@@ -595,8 +628,10 @@ header {
     .modal-success {
         width: 500px;
         margin: 0 auto;
-        left: 40%;
-        right: 35%;
+        left: 30%;
+        right: 30%;
+        position: absolute;
+        z-index: 999;
     }
     
     .selection-modal {
@@ -636,18 +671,17 @@ header {
         margin-bottom: 0 !important;
     }
 
-    .selection-modal .card input[type="submit"], .selection-modal .card input[type="text"] {
+    .selection-modal .card button[type="submit"], .selection-modal .card input[type="text"] {
         width: 120px;
     }
 
-    .selection-modal .card input[type="text"] {
+    .selection-modal .card button[type="text"] {
         padding-left: 50px;
     }
 
     .options::before {
-        left: 30px;
+        left: 20px;
     }
-
 }
 
 @media screen and (min-width:1400px) {
