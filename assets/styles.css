@@ -20,6 +20,8 @@ body {
       "slnt" 0,
       "FLAR" 0,
       "VOLM" 0;
+      width: 100%;
+      height: 100%;
 }
 
 .full-container {
@@ -474,6 +476,11 @@ header {
 }
 
 @media screen and (min-width:968px) {
+    .full-container {
+        width: 100%;
+        height: 100%;
+    }
+
     header {
         width: 100%;
     }
@@ -521,11 +528,17 @@ header {
         justify-content: space-between;
         align-items: center;
         width: 200px;
-        background-color: #ddd;
         border-radius: 25px;
         padding-right: 40px;
-        color: var(--dark-gray);
         text-decoration: none;
+        background-color: #f2f2f2;
+        color: var(--dark-cyan);
+        font-weight: 700;
+    }
+
+    .checked {  
+        background-color: #ddd;
+        color: var(--dark-gray);
     }
 
     .bookmark-btn-mobile {
@@ -560,10 +573,81 @@ header {
         width: 650px;
     }
 
+    .title-card {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-options {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .available, .out-of-stock {
+        width: 200px;
+    }
+
     .third {
         width: 700px;
         margin: 0 auto;
     }
+
+    .modal-success {
+        width: 500px;
+        margin: 0 auto;
+        left: 40%;
+        right: 35%;
+    }
+    
+    .selection-modal {
+        width: 700px;
+        margin: auto;
+        top: 15%;
+        left: 20%;
+        right: 20%;
+    }
+
+    .container-title-options {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .container-title-options h3 {
+        width: auto;
+    }
+
+    .selection-modal .card {
+        position: relative;
+    }
+
+    .inventory-left {
+        position: absolute;
+        top: 33px;
+        right: 30px;
+    }
+
+    .selection-modal .options-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .selection-modal .options-container p {
+        margin-bottom: 0 !important;
+    }
+
+    .selection-modal .card input[type="submit"], .selection-modal .card input[type="text"] {
+        width: 120px;
+    }
+
+    .selection-modal .card input[type="text"] {
+        padding-left: 50px;
+    }
+
+    .options::before {
+        left: 30px;
+    }
+
 }
 
 @media screen and (min-width:1400px) {
@@ -574,8 +658,7 @@ header {
 
     .hero {
         max-width: 100%;
-        height: 500px;
-        aspect-ratio: 1/1;
+        height: 600px;
         object-fit: cover;
     }
 
@@ -583,7 +666,6 @@ header {
         max-width: 900px;
         margin-top: -200px;
     }
-
 
     .second {
         max-width: 900px;
@@ -599,6 +681,6 @@ header {
     }
 
     .modal-success {
-        display: flex;
+        left: 36%;
     }
 }
