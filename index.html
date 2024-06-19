@@ -16,11 +16,12 @@
 </head>
 <body>
   <div class="full-container">
+    <div class="overlay hide"></div>
     <header class="header">
       <div class="header-container">
-        <img src="./images/logo.svg" alt="Logo" srcset="">
+        <img src="./images/logo.svg" alt="Logo" srcset="" class="logo">
         <div class="nav-mobile_container">
-        <span class="icon hamburger"></span>
+        <span class="icon-hamburger"></span>
         <nav class="nav-mobile">
           <a href="#">About</a><a href="#">Discover</a><a href="#">Get Started</a>
         </nav>
@@ -31,20 +32,21 @@
       </div>
     </header>
     <main class="main">
+      <div class="main-container">
       <section class="hero">
         <picture>
       <source srcset="./images/image-hero-desktop.jpg" media="(min-width:768px)">    
       <img src="./images/image-hero-mobile.jpg" alt="Hero" srcset="">
         </picture>
       </section>
-      <div class="main-container">
+      <div class="section-container">
         <section class="container first">
-          <img src="./images/logo-mastercraft.svg" alt="Logo Mastercraft" srcset="">
+          <img src="./images/logo-mastercraft.svg" alt="Logo Mastercraft" srcset="" class="logo-mastercraft">
           <h1>Mastercraft Bamboo Monitor Riser</h1>
           <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
           <div class="options-container">
-            <a href="#">Back this project</a>
-            <a href="#"><img src="./images/icon-bookmark.svg" alt="Bookmark icon" srcset=""></a>
+            <a href="#" class="back-btn">Back this project</a>
+            <a href="#"><img src="./images/icon-bookmark.svg" alt="Bookmark icon" srcset="" class="bookmark-btn"></a>
           </div>
         </section>
         <section class="container second">
@@ -89,7 +91,8 @@
                 member list. Shipping is included.</p>
               <p><span class="number-inventory">64</span> left</p>
               <a href="#" class="available">Select Reward</a>
-              <div class="card">
+              </div>
+              <div class="card no-available">
                 <h3>Mahogany Special Edition</h3>
                 <p class="color">Pledge $200 or more</p>
                 <p>You get an ergonomic stand madYou get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
@@ -100,7 +103,7 @@
         </section>
       </div>
     </main>
-
+  </div>
   <!-- Selection modal-->
   <div class="selection-modal">
     <h2>Back this project</h2>

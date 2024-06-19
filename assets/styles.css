@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --moderate-cyan: hsl(176, 50%, 47%);
+    --dark-cyan: hsl(176, 72%, 28%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 48%);
+    font-size: 16px;
+}
+
+body {
+    position: relative;
+}
+
+.full-container {
+    width: 100%;
+}
+
+.overlay {
+    background-color: var(--black);
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}
+
+header {
+    background-color: transparent;
+    height: 70px;
+    position: relative;
+    z-index: 999;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 120px;
+}
+
+.nav-mobile_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.icon-hamburger {
+    display: inline-block;
+    background: url(../images/icon-hamburger.svg);
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.nav-desktop {
+    display: none;
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    width: 90vw;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.nav-mobile a {
+    display: flex;
+    width: 100%;
+    padding: 25px 0 20px 20px;
+    border-top: 1px solid #ddd;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-mobile a:first-of-type {
+    border-top: none;
+}
+
+.hero {
+    margin-top: -70px;
+}
+
+.main {
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.section-container {
+    margin: 0 auto;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #ddd;
+}
+
+.first {
+    margin-top: -60px;
+}
+
+.logo-mastercraft {
+    position: absolute;
+    top: -30px;
+    left: 45%;
+}
+
+.container h1 {
+    width: 70%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container p {
+    color: var(--dark-gray);
+    text-align: center;
+    line-height: 1.7;
+}
+
+.first .options-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    background-color: var(--moderate-cyan);
+    border-radius: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.second .content-container {
+    margin: 20px 0;
+}
+
+.second .content-container h2, .second .content-container p {
+    text-align: center;
+}
+
+.second .content-container h2 {
+    font-weight: 800;
+    font-size: 1.9rem;
+    margin-top: -20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.second .content-container:first-of-type > h2 {
+    border-top: none;
+}
+
+.second .content-container {
+    border-bottom: none;
+}
+
+.bar-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.bar {
+    position: relative;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 10px;
+    border-radius: 20px;
+}
+
+.bar::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    background-color: var(--moderate-cyan);
+    height: 10px;
+    border-radius: 20px;
+}
+
+.third .content-container {
+    margin-bottom: 10px;
+}
+
+.third .content-container h2 {
+    margin-bottom: 30px;
+}
+
+.third .content-container p {
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.color {
+    color: var(--moderate-cyan) !important;
+}
+
+.card p {
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.number-inventory {
+    font-size: 1.9rem;
+    color: var(--black) !important;
+    font-weight: 800;
+}
+
+.available, .out-of-stock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    width: 60%;
+    height: 50px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.available {
+    background-color: var(--moderate-cyan);
+}
+
+.no-available {
+    opacity: .4;
+}
+
+.out-of-stock {
+    background-color: var(--black);
+}
+
