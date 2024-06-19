@@ -180,6 +180,10 @@ header {
     font-weight: 500;
 }
 
+.bookmark-btn-desktop {
+    display: none;
+}
+
 .back-btn:hover {
     background-color: var(--dark-cyan);
 }
@@ -467,4 +471,134 @@ header {
 
 #close-success-modal:hover {
     background-color: var(--dark-cyan);
+}
+
+@media screen and (min-width:968px) {
+    header {
+        width: 100%;
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+    }
+
+    .header-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .nav-mobile_container {
+        display: none;
+    }
+
+    .nav-desktop {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-desktop a {     
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .first {
+        width: 700px;
+        margin: -80px auto 30px;
+    }
+
+    .back-btn {
+        width: 200px;
+    }
+
+    .first .options-container {
+        gap: 10px;
+        justify-content: space-around;
+    }
+
+    .bookmark-btn-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        background-color: #ddd;
+        border-radius: 25px;
+        padding-right: 40px;
+        color: var(--dark-gray);
+        text-decoration: none;
+    }
+
+    .bookmark-btn-mobile {
+        display: none;
+    }
+
+    .second {
+        width: 700px;
+        margin: 10px auto 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .second .content-container {
+        width: 30%;
+        border-right: 1px solid #ddd;
+    }
+
+    .second .content-container:last-of-type {
+        border-right: none;
+    }
+
+    .second .content-container h2 {
+        border-top: none;
+    }
+    
+    .bar-container {
+        width: 100%;
+    }
+
+    .card {
+        width: 650px;
+    }
+
+    .third {
+        width: 700px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:1400px) {
+
+    .header-container {
+        max-width: 1100px;
+    }
+
+    .hero {
+        max-width: 100%;
+        height: 500px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .first {
+        max-width: 900px;
+        margin-top: -200px;
+    }
+
+
+    .second {
+        max-width: 900px;
+    }
+
+    .card {
+        max-width: 850px;
+    }
+
+    .third {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .modal-success {
+        display: flex;
+    }
 }
