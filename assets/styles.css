@@ -115,6 +115,7 @@ header {
 
 .hero {
     margin-top: -70px;
+    object-fit: contain;
 }
 
 .main {
